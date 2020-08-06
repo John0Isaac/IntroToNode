@@ -17,7 +17,7 @@ const cors = require('cors');
 app.use(cors());
 
 // Intialize the main project folder 
-app.use(express.static('demo'));
+app.use(express.static('frontend'));
 
 const port = 8000;
 // Spin up the server 
