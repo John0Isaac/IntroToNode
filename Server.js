@@ -4,6 +4,9 @@ const express = require('express');
 // Start up an instance of the app 
 const app = express();
 
+// Create JS object
+const appData = {}
+
 /* Dependencies */
 const bodyParser = require('body-parser')
 /* Middleware */
@@ -28,3 +31,13 @@ function listening (){
     console.log('server running');
     console.log(`running on localhost: ${port}`);
 };
+
+// GET method route
+app.get('/', function (req, res) {
+    res.send(appData);
+  });
+
+// POST method route
+app.post('/', function (req, res) {
+    res.send('POST received')
+  })
