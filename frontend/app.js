@@ -18,6 +18,6 @@ const postData = async ( url = '', data = {})=>{
       console.log("error", error);
       // appropriately handle the error
       }
-  }
+}
   
 postData('/addAnimal', {animal:'lion'})

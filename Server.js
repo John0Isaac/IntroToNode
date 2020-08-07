@@ -16,7 +16,7 @@ const cors = require('cors');
 app.use(cors());
 
 /* Initialize the main project folder*/
-app.use(express.static('website'));
+app.use(express.static('frontend'));
 
 const port = 3000;
 /* Spin up the server*/
@@ -43,9 +43,8 @@ function callBack(req,res){
 // POST an animal
 const data = [];
 
-app.post('/addAnimal', addAnimal);
+app.post('/animal', addAnimal);
 
 function addAnimal (req,res){
     data.push(req.body);
-    console.log(data)
 };
